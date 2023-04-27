@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="fx.FXMLExampleController"
+          prefHeight="400.0" prefWidth="600.0">
+
+    <padding>
+        <Insets top = "25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <Text id="welcome-text"
+          text = "Welcome"
+          GridPane.columnIndex = "0" GridPane.rowIndex = "0"
+          GridPane.columnSpan = "2"
+    />
+
+    <Label text="Username: " GridPane.columnIndex="0" GridPane.rowIndex = "1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex = "1" />
+
+    <Label text="Password: " GridPane.columnIndex="0" GridPane.rowIndex = "2" />
+    <PasswordField fx:id="PasswordField" GridPane.columnIndex="1" GridPane.rowIndex = "2" />
+
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex = "4">
+        <Button text = "Sign in " onAction="#handleSubmitButtonAction"/>
+    </HBox>
+
+    <Text fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex = "6" />
+    <stylesheets>
+        <URL value = "@css/LoginFormCSS.css"/>
+    </stylesheets>
+</GridPane>
